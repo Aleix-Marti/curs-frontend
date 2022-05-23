@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- Configuració del document -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title><!-- Títol de la pàgina web. Apareix a la pestanya del navegador -->
+</head>
+<body><!-- Tot el codigo HTML va dins del tag body -->
+
+    <header><!-- Capçalera de secció -->
+        
+        <img src="https://picsum.photos/100/50" alt="Logo"><!-- Imatge. La ruta del recurs src pot ser una URL d'un recurs extern o pot apuntar cap a un fitxer del propi servidor -->
+        
+        <nav><!-- Barra de navegació -->
+            <ul><!-- Llista desordenada (sense numeració) d'elementos -->
+                <li><!-- Ítem de llista -->
+                    <a href="#section-1">Section 1</a><!-- Enllaç a apartat de la mateixa pàgina amb l'id corresponent (#id-apartat) -->
+                </li>
+                <li>
+                    <a href="https://google.com" target="_blank">Google</a><!-- Enlace a URL externa (https://domini.com). target="_blank" obre l'enllaç en una pestanya nova  -->
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <h1>Main Title</h1><!-- Títol de la pàgina. Només hi pot haver un H1 per pàgina. La resta de títols poden anar de H2 a H6, poden estar repetits i són jeràrquics. Seccions
+    del mateix nivell poden tenir el mateix H, per exemple H2. Si a dins de les seccions hi ha més títols o subapartats, llavors ha de ser H3, H4 ... -->
+
+    <section id="#section-1"><!-- Contenidor amb ID -->
+
+        <img src="img/logo-html5.png" alt="Logotip HTML5"><!-- Imatge dins del mateix servidor, a la carpeta /img/ . L'atribut "alt" serveix per escirure una descripció de la imatge,
+        per accessibilitat. Per exemple, un usuari invident no pot veure la imatge, però si té una descripció, hi ha eines que li podran llegir la descripció. En cas que la imatge sigui
+        totalment decorativa i no aporti res, l'atribut alt s'ha deixar buit ( alt="" ), però sempre s'ha d'escriure -->        
+
+        <p><!-- Paràgraf -->
+            Toad-like smile Flourish and Blotts he knew I'd come back Quidditch World Cup. Fat Lady baubles banana fritters fairy lights Petrificus Totalus. 
+            So thirsty, deluminator first years follow me 12 inches of parchment. Head Boy start-of-term banquet Cleansweep Seven roaring lion hat. 
+            Unicorn blood crossbow mars is bright tonight, feast Norwegian Ridgeback. Come seek us where our voices sound, we cannot sing above the ground, 
+            Ginny Weasley bright red. Fanged frisbees, phoenix tears good clean match.
+            <br><!-- Salt de linia  -->
+            Squashy armchairs dirt on your nose brass scales crush the Sopophorous bean with flat side of silver dagger, releases juice better than cutting. 
+            Full moon Whomping Willow three turns should do it lemon drops. Locomotor trunks owl treats that will be 50 points, Mr. Potter. 
+            Witch Weekly, he will rise again and he will come for us, headmaster Erumpent horn. Fenrir Grayback horseless carriages 'zis is a chance many would die for!
+        </p>
+        <p><!-- span: element inline amb una classe per a donar-li estil propi desde CSS -->
+            Half-giant jinxes peg-leg gillywater <span class="color-green">broken glasses</span> large black dog Great Hall. Nearly-Headless Nick now string them together, and answer me this, 
+            which creature would you be unwilling to kiss? Poltergeist sticking charm, troll umbrella stand flying cars golden locket Lily Potter. 
+            Pumpkin juice Trevor wave your wand out glass orbs, a Grim knitted hats. Stan Shunpike doe patronus, suck his soul Muggle-Born large order of drills the trace. 
+            Bred in captivity fell through the veil, quaffle blue flame ickle diddykins Aragog. Yer a wizard, Harry Doxycide the woes of Mrs. Weasley Goblet of Fire.
+        </p>
+
+    </section>
+
+    
+    <section><!-- Contenidor -->
+
+        <h2>Services</h2><!-- Títol de secció -->
+
+        <article><!-- Contenidor -->
+
+            <header><!-- Contenidor capçalera de secció -->
+                <h3>Web Development</h3><!-- Subtítol de secció -->
+            </header>
+
+            <main><!-- Contenedor cos de secció -->
+                <img src="https://picsum.photos/200/300?random=1" alt="Descripció de la imatge">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            </main>
+
+            <footer><!-- Contenidor Peu de secció -->
+                <button>Know More</button><!-- Botó. En aquest moment no fa res. Se li ha de donar funcionalitat a través de JavaScript -->
+            </footer>
+
+        </article>
+
+
+        <div><!-- Contenidor-->
+            <h3>Web Development</h3>
+            <img src="https://picsum.photos/200/300?random=2" alt="Descripció de la imatge">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            <button>Know More</button>
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <form action=""><!-- Formulari -->
+
+            <label for="f_name">Name</label><!-- Etiqueta lligada a un camp a través de l'atribut "for", al que se li indica l'ID del camp al quan fa referència-->
+            <input type="text" name="name" id="f_name" placeholder="Your name"><!-- Input de tipus text. L'atribut "name" s'utilitza per tractar la informació quan s'envia el formulari.
+            l'atribut "id" serveix per identificar el camp desde JavaScript i per lligar-lo a una etiqueta. "placeholder" és un text per defecte per indicar a l'usuari que hi ha d'escriure. -->
+
+            <label for="f_name">Email</label>
+            <input type="email" name="email" id="f_email" placeholder="Your email"><!-- Input de tipus email -->
+
+            <label for="f_tarea">Comments</label>
+            <textarea name="comments" id="f_tarea" cols="30" rows="10"></textarea><!-- Caixa de text de múltiples columnes i files -->
+
+
+            <fieldset><!-- Grup de camps -->
+                <legend>Colors</legend><!-- Llegenda del grup de camps -->
+                <label for="radio_red">Red</label><!-- Radio button: si tots comparteixen el mateix atribut "name", només es podrà seleccionar una sola opció del grup. L'atribut "value" 
+                és el valor que es capturarà del formulari, segons l'input que s'hagi seleccionat. -->
+                <input type="radio" name="radio_colors" id="radio_red" value="red">
+
+                <label for="radio_green">Green</label>
+                <input type="radio" name="radio_colors" id="radio_green" value="green">
+
+                <label for="radio_blue">Blue</label>
+                <input type="radio" name="radio_colors" id="radio_blue" value="blue">
+            </fieldset>
+
+            <label for="f_accept">Acepto los términos y condiciones de la web</label>
+            <input type="checkbox" name="accept" id="f_accept"><!-- Checkbox -->
+
+            <input type="submit" value="Send Form"><!-- Botó d'enviament del formulari amb el text "Send Form"-->
+
+        </form>
+    </section>
+
+
+</body>
+</html>
