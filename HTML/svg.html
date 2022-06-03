@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemples SVG</title>
+  <style>
+    .experiencia_container {
+      padding: 2rem;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .dark {
+      background-color: #222;
+    }
+
+    .experiencia {
+      color: white;
+      padding: 2rem;
+      background-color: #222;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .round {
+      transform: rotate(-90deg);
+      transition: all 1s ease-in-out;
+      /* SVG */
+      fill: none;
+      stroke-width: 8;
+      stroke-linecap: round;
+    }
+
+    .svg-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .percentage {
+      position: absolute;
+      margin: auto;
+      font-size: 2rem;
+      color: #222;
+    }
+
+    .dark .percentage {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  
+   <!--
+  (al codi es pot veure que r=40)
+  (al codi es pot veure que data-percent= 90)
+  Partint d'aquests valors, s'ha de calcular el valor de stroke-dasharray
+  roundCircum = 2 * r * Math.PI;    ( 2 * 40 * 3.14159 )
+  stroke-dasharray = data-percent * roundCircum / 100; 
+  -->
+
+  <article class="experiencia_container dark">
+    <div class="svg-container">
+      <svg class="round" viewbox="0 0 100 100" width="200" height="200" data-percent="90" stroke="orange" stroke-dasharray="226  1000" >
+        <circle cx="50" cy="50" r="40" />  
+      </svg>
+      <p class="percentage">HTML</p>
+    </div>
+
+    <div class="svg-container">
+      <svg class="round" viewbox="0 0 100 100" width="200" height="200" data-percent="85" stroke="blue" stroke-dasharray="213 1000" >
+        <circle cx="50" cy="50" r="40" />  
+      </svg>
+      <p class="percentage">CSS</p>
+    </div>
+
+    <div class="svg-container">
+      <svg class="round" viewbox="0 0 100 100" width="200" height="200" data-percent="65" stroke="yellow" stroke-dasharray="175 1000" >
+        <circle cx="50" cy="50" r="40" />  
+      </svg>
+      <p class="percentage">JS</p>
+    </div>
+  </article>
+
+  <article class="experiencia_container">
+    <div class="svg-container">
+      <svg class="round" viewbox="0 0 100 100" width="200" height="200" data-percent="90" stroke="orange" stroke-dasharray="226  1000" >
+        <circle cx="50" cy="50" r="40" />  
+      </svg>
+      <p class="percentage">HTML</p>
+    </div>
+
+    <div class="svg-container">
+      <svg class="round" viewbox="0 0 100 100" width="200" height="200" data-percent="85" stroke="blue" stroke-dasharray="213 1000" >
+        <circle cx="50" cy="50" r="40" />  
+      </svg>
+      <p class="percentage">CSS</p>
+    </div>
+
+    <div class="svg-container">
+      <svg class="round" viewbox="0 0 100 100" width="200" height="200" data-percent="65" stroke="yellow" stroke-dasharray="175 1000" >
+        <circle cx="50" cy="50" r="40" />  
+      </svg>
+      <p class="percentage">JS</p>
+    </div>
+  </article>
+
+
+</body>
+</html>
