@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="96.303833mm"
+   height="95.527679mm"
+   viewBox="0 0 96.303833 95.52768"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="grafic_html.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.46889132"
+     inkscape:cx="1233.7614"
+     inkscape:cy="506.51396"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(152.44448,82.67626)">
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:25;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path16784"
+       sodipodi:type="arc"
+       sodipodi:cx="428.73703"
+       sodipodi:cy="106.13103"
+       sodipodi:rx="84.011948"
+       sodipodi:ry="84.832237"
+       sodipodi:start="3.1407684"
+       sodipodi:end="3.1399541"
+       sodipodi:arc-type="arc"
+       d="m 344.72511,106.20095 a 84.011948,84.832237 0 0 1 83.92557,-84.902115 84.011948,84.832237 0 0 1 84.09823,84.727725 84.011948,84.832237 0 0 1 -83.89132,84.93662 84.011948,84.832237 0 0 1 -84.13239,-84.69315"
+       sodipodi:open="true" />
+    <g
+       id="g23248"
+       transform="translate(-245.7251,-137.65339)">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#cf7d17;stroke-width:15;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path16784-9"
+         sodipodi:type="arc"
+         sodipodi:cx="101.23885"
+         sodipodi:cy="-142.504"
+         sodipodi:rx="40.264881"
+         sodipodi:ry="40.658024"
+         sodipodi:start="3.1407684"
+         sodipodi:end="2.6404607"
+         sodipodi:arc-type="arc"
+         sodipodi:open="true"
+         d="m 60.973986,-142.47049 a 40.264881,40.658024 0 0 1 35.208853,-40.36972 40.264881,40.658024 0 0 1 44.059391,30.23873 40.264881,40.658024 0 0 1 -24.21594,47.91435 40.264881,40.658024 0 0 1 -50.10132,-18.284"
+         transform="rotate(90.605741)" />
+      <text
+         xml:space="preserve"
+         style="font-size:12.6717px;line-height:1.25;font-family:sans-serif;fill:#ffffff;stroke-width:0.0659982"
+         x="142.75728"
+         y="94.753235"
+         id="text20091"
+         transform="scale(0.87676262,1.1405596)"><tspan
+           sodipodi:role="line"
+           id="tspan20089"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.6717px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.0659982"
+           x="142.75728"
+           y="94.753235">HTML</tspan></text>
+    </g>
+    <g
+       id="g25689"
+       transform="translate(-238.23108,-21.693227)">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#171bcf;stroke-width:15;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path16784-9-9"
+         sodipodi:type="arc"
+         sodipodi:cx="108.12431"
+         sodipodi:cy="-144.7141"
+         sodipodi:rx="40.264881"
+         sodipodi:ry="40.658024"
+         sodipodi:start="3.1407684"
+         sodipodi:end="1.9003762"
+         sodipodi:arc-type="arc"
+         sodipodi:open="true"
+         transform="rotate(90.605741)"
+         d="m 67.859446,-144.68058 a 40.264881,40.658024 0 0 1 27.946357,-38.74206 40.264881,40.658024 0 0 1 45.065337,15.05105 40.264881,40.658024 0 0 1 -0.44279,47.92778 40.264881,40.658024 0 0 1 -45.335586,14.19946" />
+      <text
+         xml:space="preserve"
+         style="font-size:12.6717px;line-height:1.25;font-family:sans-serif;fill:#ffffff;stroke-width:0.0659982"
+         x="145.19487"
+         y="100.8103"
+         id="text20091-5"
+         transform="scale(0.87676261,1.1405596)"><tspan
+           sodipodi:role="line"
+           id="tspan20089-5"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.6717px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.0659982"
+           x="145.19487"
+           y="100.8103">CSS3</tspan></text>
+    </g>
+    <g
+       id="g27830"
+       transform="matrix(1.0582516,0,0,0.98214961,-3.8207451,-3.4167037)">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#cfc317;stroke-width:15;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path16784-9-9-9"
+         sodipodi:type="arc"
+         sodipodi:cx="105.36246"
+         sodipodi:cy="-145.08504"
+         sodipodi:rx="40.264881"
+         sodipodi:ry="40.658024"
+         sodipodi:start="3.1407684"
+         sodipodi:end="0.82296677"
+         sodipodi:arc-type="arc"
+         sodipodi:open="true"
+         transform="rotate(90.605741)"
+         d="m 65.09759,-145.05152 a 40.264881,40.658024 0 0 1 30.309964,-39.42933 40.264881,40.658024 0 0 1 45.313266,19.94516 40.264881,40.658024 0 0 1 -7.97627,49.25976" />
+      <text
+         xml:space="preserve"
+         style="font-size:12.6717px;line-height:1.25;font-family:sans-serif;fill:#ffffff;stroke-width:0.0659982"
+         x="154.64847"
+         y="98.392387"
+         id="text20091-5-3"
+         transform="scale(0.8767626,1.1405596)"><tspan
+           sodipodi:role="line"
+           id="tspan20089-5-6"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.6717px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.0659982"
+           x="154.64847"
+           y="98.392387">JS</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:13.6129px;line-height:1.25;font-family:sans-serif;stroke-width:0.0709003"
+       x="-1.4066373"
+       y="-99.431122"
+       id="text28780"
+       transform="scale(1.0857758,0.92100045)"><tspan
+         sodipodi:role="line"
+         id="tspan28778"
+         style="stroke-width:0.0709003"
+         x="-1.4066373"
+         y="-99.431122">Exporting an object as svg from inkscape</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.0709003"
+         x="-1.4066373"
+         y="-82.414993"
+         id="tspan28782">Select the object(s) to export.</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.0709003"
+         x="-1.4066373"
+         y="-65.398872"
+         id="tspan28784">Open the document properties window (Ctrl+Shift+D)</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.0709003"
+         x="-1.4066373"
+         y="-48.382748"
+         id="tspan28786">Select &quot;Resize page to drawing or selection&quot;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.0709003"
+         x="-1.4066373"
+         y="-31.366623"
+         id="tspan28788">File &gt; Save As Copy…</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.0709003"
+         x="-1.4066373"
+         y="-14.350498"
+         id="tspan28790">Select Optimized SVG as the format if you want to use it on the web</tspan></text>
+  </g>
+</svg>
