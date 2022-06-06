@@ -1,0 +1,199 @@
+.css {
+
+/* Posicionament */
+
+display: block;
+display: inline;
+display: inline-block;
+display: none;
+
+position: relative;
+position: absolute; /* a dins d'un contenidor amb position:relative */
+position: fixed;
+
+top: 50px;
+top: 70%;
+left: 10em; /* 10 em és 10 vegades la mida definida al seu element pare. Si no està definit, es va pujant pels pares fins trobar una mida definida. Si no se'n troba cap es consideran 1em = 16px*/
+right: 5rem; /* 5 rem és 5 vegades la mida definida a l'element HTML o BODY. Si no es defineix, per defecte són 16px. Per tant, 5*16 */
+bottom: 0; /* si el valor és 0 no cal indicar unitat */
+
+width: 200px;
+width: 50%; /* 50% de la mida del contenidor */
+width: 75vw; /* 75% de l'amplada del viewport: mida de la pantalla del navegador */
+height: 40px;
+height: 80vh; /* 80% de l'alçada del viewport: mida de la pantalla del navegador */
+
+
+/* Espaiat i marges */
+
+padding: 20px; /* top, right, bottom, left = 20px */
+padding: 20px 35px; /* top, bottom = 20px, right, left = 35px */
+padding: 20px 10px 35px; /* top = 20px, left, right = 10px, bottom = 35px */
+padding: 10px 20px 30px 40px; /* top = 10px, right = 20px, bottom = 30px, left = 40px */
+padding-top: 10px;
+padding-right: 2em;
+padding-bottom: 0;
+padding-left: 1rem;
+
+margin: 20px; /* top, right, bottom, left = 20px */
+margin: 20px 35px; /* top, bottom = 20px, right, left = 35px */
+margin: 20px 10px 35px; /* top = 20px, left, right = 10px, bottom = 35px */
+margin: 10px 20px 30px 40px; /* top = 10px, right = 20px, bottom = 30px, left = 40px */
+margin-top: 10px;
+margin-right: 2em;
+margin-bottom: 0;
+margin-left: 1rem;
+
+border: 1px solid blue;
+border-width: 1px;
+border-style: solid;
+border-color: blue;
+
+border-top: 1px solid green;
+border-right: 0;
+border-bottom: 2px dashed yellow;
+border-left: 2px solid #fff;
+
+border-radius: 2px;
+
+
+/* Fons */
+
+background-color: blue;
+background-image: url('path/a/la/imatge.jpg');
+background-position: fixed;
+background-size: 80%;
+background-size: cover;
+background-size: 50px 200px; /* width: 50px, height: 200px */
+background-position: center;
+background-position: 200px 10%; /* 200px des de l'esquerra, 10% des del top */
+background-attachment: fixed;
+
+
+/* Tipografia */
+
+font-family: 'Arial', sans-serif;
+font-size: 16px;
+font-size: 1em;
+font-size: 2rem;
+font-weight: bold;
+font-weight: 600; /* entre 100 i 900 */
+line-height: 1.2; /* alt de línea de text */
+
+color: blue;
+color: #0000ff;
+color: rgb(0,0,255);
+color: hsl(240,100%,50%);
+
+text-decoration: underline;
+text-decoration: none;
+
+
+/* Efectes i animació */
+
+opacity: 0;
+opacity: 0.5;
+opacity: 1;
+
+transition: color .3s, width 2s;
+transition: all .3s;
+transition: width 2s linear 1s;
+transition-property: width;
+transition-duration: 2s;
+transition-timing-function: linear;
+transition-delay: 1s;
+
+animation-name: example;
+animation-duration: 4s;
+animation-iteration-count: 2;
+animation-direction: alternate-reverse;
+
+animation: animacio 2s infinite alternate-reverse;
+
+@keyframes animacio {
+    from { 
+        width: 200px;
+        top: 0;
+    }
+    to {
+        width: 400px;
+        top: 50px;
+    }
+}
+
+@keyframes animacio {
+    0% {
+        color: red;
+        width: 50px;
+    }
+    50% {
+        color: blue;
+        width: 100px;
+    }
+    100% {
+        color: yellow;
+        width: 70px;
+    }
+}
+
+
+/* Posicionament - Flexbox */
+
+display: flex;
+flex-direction: row;
+flex-direction: column;
+justify-content: flex-start;
+justify-content: flex-end;
+justify-content: center;
+justify-content: space-between;
+justify-content: space-evenly;
+align-items: flex-start;
+align-items: flex-end;
+align-items: center;
+align-items: space-between;
+align-items: space-evenly;
+align-self: flex-start;
+align-self: flex-end;
+align-self: center;
+align-self: space-between;
+align-self: space-evenly;
+flex-grow: 1;
+flex-grow: 3;
+flex-shrink: 1;
+flex-wrap: wrap;
+flex-wrap: nowrap;
+
+
+/* Posicionament - Grid */
+
+display: grid;
+grid-template-columns: 70% 30%;
+grid-template-columns: repeat(3, 300px);
+grid-template-columns: 50px 2fr 1fr;
+grid-template-columns: minmax(auto, 50%) 1fr 3em;
+grid-template-rows: 50px;
+grid-row-gap: 20px; /* espaiat entre files */
+grid-column-gap: 5rem; /* espaiat entre columnes */
+
+
+grid-row-start: 2;
+grid-row-end: 3;
+grid-row: 2 / 3;
+
+grid-column-start: 2;
+grid-column-end: 3;
+grid-column: 2 / 3;
+
+grid-area: 2 / 2 / 3 / 3; /* grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+
+grid-template-areas: "header header"
+                     "content sidebar"
+                     "footer footer";
+
+grid-template-areas: "logo navbar navbar navbar"
+                     "content content . sidebar"
+                     "footer footer footer footer";
+
+
+}
+

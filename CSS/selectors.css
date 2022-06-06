@@ -1,0 +1,228 @@
+/* selector per a TOTS els elements */
+
+* {
+    padding: 0;
+}
+
+
+/* selector d'una etiqueta HTML
+<p> */
+
+p {
+    color: lightgreen;
+}
+
+
+/* selector de múltiples etiqueta HTML a les que volem aplicar el mateix estil.
+Per millorar la llegibilitat del codi es recomana posar cada selector en una linia nova.
+És imprescindible separar-los amb una coma (hi hagi o no un salt de linia)
+<div>
+<a>  <--- objectiu
+<nav>
+<button>  <--- objectiu
+<p> */
+
+a,
+button {
+    color: lightgreen;
+}
+
+
+/* selector d'element fill (descendent directe)
+<ul>
+  <li>  <--- objectiu */
+
+ul > li {
+    color: yellow;
+}
+
+
+/* selector de descendent de qualsevol nivell (no cal que sigui descendent directe) 
+<nav>
+  <ul>
+    <li>  <--- objectiu */
+
+nav li {
+    color: blue;
+}
+
+
+/* primer item d'una llista (idealment dins d'un contenidor
+<li>  <--- objectiu
+<li>
+<li>
+<li>
+<li> */
+
+li:first-child {
+    color:red;
+}
+
+
+/* 
+últim item d'una llista 
+<p>
+<p>
+<p>
+<p>
+<p>  <--- objectiu */
+
+p:last-child {
+    color:red;
+}
+
+
+/* estil per defecte d'un link 
+<a> */
+
+a:link {
+    color:yellowgreen;
+    text-decoration: none;
+}
+
+
+/* estil d'un link un cop visitat 
+<a> */
+
+a:visited {
+    color:yellowgreen;
+}
+
+
+/* estil d'un link mentre s'està fent click 
+<a> */
+
+a:active {
+    background: magenta;
+}
+
+
+/* estil quan es passa el cursor per sobre (no cal que sigui d'un link) 
+<a> */
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+/* qualsevol element precedit d'un altre (elements germans) 
+<p>
+<a>  <--- objectiu */
+
+p + a {
+    background: blue;
+}
+
+
+/* qualsevol element precedit d'un altre (elements germans)
+En aquest cas, tots els elements estan precedits d'un altre excepete el primer
+<li>
+<li>  <--- objectiu
+<li>  <--- objectiu
+<li>  <--- objectiu
+<li>  <--- objectiu */
+
+li + li {
+    border-top: 1px solid;
+}
+
+
+/* element amb atribut indicat entre [] 
+<p data-num="..."> */
+
+p[num] {
+    background: orangered;
+}
+
+
+/* element amb atribut amb el valor exacte indicat entre []
+<p data-num="..."> o <input type="text"> */
+
+p[num="100"] {
+    background: red;
+}
+
+input[type="text"] {
+    background: red;
+}
+
+
+/* per accessibilitat: detectar totes les imatges que NO tingut atribut alt, o que el tinguin buit 
+l'atribut alt serveix per escriure una descripció textual d'una imatge, d'aquesta manera, usuaris amb
+problemes de visió que no poden veure la imatge, poden disposar d'eines que els hi llegeixen la descripció
+<img src="...">  <--- objectiu
+<img src="..." alt="">  <--- objectiu
+<img src="..." alt="..."> */
+
+img:not([alt]),
+img[alt=""]{
+    outline: 3px solid red;
+}
+
+
+/* seleccionar un element pel seu ID 
+<div id="bart"> */
+
+#homer {
+    background-color: yellow;
+}
+
+
+/* seleccionar un element per la seva CLASSE, o tots els elements que tinguin la mateixa CLASSE
+<h2 class="big">  <--- objectiu */
+.big {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* resulta molt últil reaprofitar les classe per tots els elements que volem que tinguin el mateix estil 
+<div class="simpson">Maggie</div>  <--- objectiu
+<div class="american-dad">Roger</div>
+<div class="simpson">Homer</div>  <--- objectiu
+<div class="american-dad">Stan</div> */
+
+.simpson {
+  background-color: yellow;
+}
+
+
+/* seleccinar un element HTML concret amb una classe concreta 
+<ul>
+<ul class="pare">  <--- objectiu */
+
+ul.pare {
+    background: cyan;
+}
+
+
+/* seleccionar un element que contingui les 2 classes 
+Un element pot tenir múltiples classes. S'han d'escriure separades amb un espai en blanc
+<ul>
+  <li>
+  <li class="fill-1">
+  <li class="fill-1 fill-2">  <--- objectiu
+  <li class="fill-2">
+  <li class="fill-3"> */
+
+.fill-1.fill-2 {
+    background: blue;
+}
+
+
+/* seleccionar un element amb classe .fill que sigui descendent (directe o no) d'un element amb classe .avi
+Important posar un espai entre les dues classes. No confondre .classe1.classe2 (element amb 2 classes) amb  .classe1 .classe2 (descendent)
+
+<nav class="avi">
+  <ul class="random">
+    <li>
+    <li class="fill">  <--- objectiu
+    <li class="random">
+    <li>
+*/
+
+.avi .fill {
+    background: lightgreen;
+}

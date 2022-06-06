@@ -1,0 +1,117 @@
+section {
+  margin: 5rem 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+/* DISPLAY */
+
+ul > li {
+  outline: 1px solid;
+}
+
+/* per aplicar les propietats de "width" i/o "height" per forçar amplada i/o alçada d'un element, l'element NO pot ser "inline"*/
+li.width {
+  width: 200px;
+  height: 50px;
+}
+
+/* per defecte ocupa el 100% de l'amplada. Per tant, el següent element farà un salt de lína automàticament, ja que no hi cabrà.*/
+/* permet forçar alçada i/o amplada */
+ul.block li {
+  display: block;
+}
+
+/* adpopta alçada i amplada del contingut. Sempre que tingui lloc, el següent element es posarà a continuació */
+ul.inline li {
+  display: inline;
+}
+
+/* barreja inline amb block.*/
+ul.inline-block li {
+  display: inline-block;
+}
+
+/* CASCADA */
+
+.red {
+  color: red;
+}
+
+/* s'està sobreescrivint la classe ".red". CSS actua en cascada, i en cas de repetir-se, aplica l'última propietat declarada */
+.red {
+  color: blue;
+}
+
+/* l'elment amb classe yellow també té la classe red (veure HTML). Com que s'està sobrescrivint el valor "color", aplica l'últim que està declarat */
+.lime {
+  color: lime;
+}
+
+/* ESPECIFICITAT */
+
+/* s'aplica la propietat perquè no està sobreescrivint cap propietat "visibility" anteriroment declarada */
+/* display:none fa desapareixer l'element i el seu espai; visibility: hidden oculta l'elment però manté el seu espai */
+.hidden {
+  visibility: hidden;
+}
+
+/* no s'aplica perquè anteriorment s'està sobreescrivint "display" amb una instrucció més específica: ul.inline-block li */
+.display-none {
+  display: none;
+}
+
+/* s'aplica, tot i que anteriorment s'està sobreescrivint "display" amb una instrucció més específica: ul.inline-block li */
+/* utilitzar !imporant és molt delicat perquè trenca el flux natural de CSS i en fitxers molt grans pot ser complicat saber què està passant a causa d'un !important */
+.display-none-important {
+  display: none !important;
+}
+
+/* s'aplica sense haver d'aplicar !important perquè s'ha escrit la instrucció de forma molt específica */
+/* sempre que es pugui, és millor utilitzar especificitat enlloc utilitzar imporant! */
+ul.inline-block li.display-none-espec {
+  display: none;
+}
+
+/* UNITATS */
+.units-container-20 {
+  font-size: 20px;
+}
+
+/* les unitats em fan referència al seu contenidor pare */
+.units-1em {
+  font-size: 1em;
+}
+
+.units-2em {
+  font-size: 2em;
+}
+
+.units-05em {
+  font-size: .5em; /* si abans del decimal el valor és 0, es pot escriure 0.5 o .5 */
+}
+
+/* les unitats rem fan referència a la mida de font base del document HTML. Per defecte, si no es canvia, són 16px */
+.units-1rem {
+  font-size: 1rem;
+}
+
+.units-2rem {
+  font-size: 2rem;
+}
+
+/* les unitats % fan referència al seu contenidor pare */
+.units-100 {
+  font-size: 100%;
+}
+
+.units-50 {
+  font-size: 50%;
+}
+
+.units-30px {
+  font-size: 30px;
+}

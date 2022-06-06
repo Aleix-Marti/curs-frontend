@@ -1,0 +1,96 @@
+html {
+  scroll-behavior: smooth; /* fa que els salts entre enllaços siguis suaus */
+}
+body {
+  margin: 0; /* elimina espai blanc entre contingut i les vores del viewport (pantalla) */
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+table {
+  margin: auto; /* centrat automàtic */
+}
+table,
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+th, 
+td {
+  padding: 1rem; /* espai entre les vores i el contingut */
+}
+.header {
+  display: flex; /* permet posicionar el contingut dels elements fills */
+  justify-content: space-between; /* provar amb altres alternatives: center, space-evenly, flex-start, flex-end i veure què passa */
+  align-items: center;
+  background-color: #222; /* color de fons */
+  padding: 1rem;
+}
+.header ul {
+  display: flex;
+  list-style: none; /* elimina els punts de la llista (provar què passa si es treu) */
+  gap: 1rem;
+}
+.header a {
+  color: white; /* color de la lletra */
+  text-decoration: none; /* decoració del text. Prova què passa si es treu */
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* es força una alçada */
+  background-image: url('https://picsum.photos/id/1021/1200/300'); /* es posa una imatge de fons a partir d'un recurs local o extern. Si és un recurs local: url('assets/lamevaimatge.jpg') */
+  background-size: cover; /* forçar que la imatge de fons cobreixi tot l'espai del seu contenidor */
+}
+h1 {
+  color: white;
+  font-size: 4rem;
+  text-shadow: 0 0 4px black; /* ombrejat al voltant del text */
+}
+h2 {
+  text-align: center; /* provar amb left o right */
+  font-size: 2rem; /* mida del text */
+  margin-bottom: 3rem;
+}
+section {
+  padding: 2rem ;
+}
+.bg-gray {
+  background-color: #eee;
+}
+.index {
+  display: flex;
+  list-style: none;
+  margin: auto;
+}
+.dades {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.index {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.index li a {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+section > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80vw; /* es permet una amplada màxima del 80% de la mida del viewport o pantalla */
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 4rem;
+  background-color: #222;
+}
