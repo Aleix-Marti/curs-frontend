@@ -1,9 +1,72 @@
+html {
+  /* font-size: 40px; */
+}
+
 section {
   margin: 5rem 0;
 }
 
 h2 {
-  text-align: center;
+  text-align: left;
+}
+
+.bloc {
+  display: block;
+  width: 300px;
+  height: 60px;
+  margin-block: 4rem;
+  padding: .5rem;
+  border: 2px solid;
+}
+.bloc-alt {
+  width: 500px;
+  height: 100px;
+}
+
+/* POSICIONAMENT */
+
+.static {
+  position: static; /* posició respecte el flux normal del document. És el posicionament per defecte. Si no s'indica un altre, és el valor que se li posa automàticament. No li afecten: top, right, bottom, left ni z-index. */
+  background-color: blue;
+  color: white;
+}
+
+.relative {
+  position: relative; /* posició respecte el flux normal del document. Es pot modificar amb: top, right, bottom, left. */
+  background-color: red;
+  color: white;
+}
+.relative-alt {
+  left: 200px;
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.absolute {
+  position: absolute; /* posició respecte a un contenidor pare amb position:relative, o respecte al contenidor root (el pare de tots, el contenidor html). La seva posició inicial s'indica amb top, bottom, right, left. */
+  background-color: lime;
+  color: black;
+  top: 0;
+  right: 2rem;
+  margin-block: 0;
+}
+
+.fixed {
+  position: fixed; /* posició relativa al contenidor root (el pare de tots, el contenidor html). Sempre está fixat en funció dels valors: top, botom, right, left. */
+  width: 100px;
+  height: 20px;
+  background-color: orange;
+  color: black;
+  top: 2rem;
+  right: 1rem;
+}
+
+.sticky {
+  position: sticky; /* posició relativa respecte a un contenidor específic, o per defecte, el contenidor root (el pare de tots, el contenidor html). Quan es fa scroll i s'arriba a la seva posició indicada per top, es queda fixat. */
+  height: 20px;
+  background-color: aquamarine;
+  color: black;
+  top: 0;
 }
 
 

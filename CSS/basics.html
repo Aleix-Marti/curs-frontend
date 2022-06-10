@@ -8,6 +8,29 @@
   <link rel="stylesheet" href="basics.css">
 </head>
 <body>
+
+  <!-- <section> -->
+
+    <h2>POSICIONAMENT</h2>
+
+    <div class="bloc static">position:static</div>
+
+    <div class="bloc absolute">position:absolute -> es posiciona respecte al pare amb posició relativa. Com que no en té, es posiciona respecte al body.s</div>
+
+    <div class="bloc relative">position:relative</div>
+
+    <div class="bloc relative-alt">position:relative desplaçat</div>
+
+    <div class="bloc bloc-alt relative">position:relative
+      <div class="bloc absolute">position:absolute amb respecte al pare amb posició relativa (div))</div>
+    </div>
+
+    <div class="bloc fixed">position:fixed</div>
+
+    <div class="bloc sticky">position:sticky</div>
+
+  <!-- </section> -->
+
   <section>
     <h2>DISPLAY</h2>
     <ul class="block">
@@ -60,10 +83,11 @@
       <li>Lenny</li>
       <li class="display-none-espec">Carl</li>
       <li>Barney</li>
-    </section>
+    </ul>
+  </section>
 
-    <section>
-      <h2>UNITATS</h2>
+  <section>
+    <h2>UNITATS</h2>
     </div>
     <p>Text base, agafa mida per defecte. Mida: 16px</p>
     <p class="units-container-20">Text amb mida de 20px. Mida: 20px</p>
@@ -77,8 +101,10 @@
       <p class="units-50">Text 50% dins de container de 20px. Mida: 10px</p>
       <p class="units-30px">Text 30px dins de container de 20px. Mida: 30px</p>
     </div>
-    </section>
-  </ul>
+  </section>
+
+
+
 
 </body>
 </html>

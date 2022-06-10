@@ -1,3 +1,5 @@
+/* Algunes de les propietats CSS més utilitzades */
+
 .css {
 
 /* Posicionament */
@@ -26,6 +28,7 @@ height: 80vh; /* 80% de l'alçada del viewport: mida de la pantalla del navegado
 
 /* Espaiat i marges */
 
+/* padding: espai entre el perímetre d'un element i el seu contingut interior */
 padding: 20px; /* top, right, bottom, left = 20px */
 padding: 20px 35px; /* top, bottom = 20px, right, left = 35px */
 padding: 20px 10px 35px; /* top = 20px, left, right = 10px, bottom = 35px */
@@ -34,7 +37,10 @@ padding-top: 10px;
 padding-right: 2em;
 padding-bottom: 0;
 padding-left: 1rem;
+padding-block: 1rem; /* padding vertical (top + bottom) */
+padding-inline: 1rem; /* padding horitzontal (left + right) */
 
+/* margin: espai entre el perímetre d'un element i els altres elements */
 margin: 20px; /* top, right, bottom, left = 20px */
 margin: 20px 35px; /* top, bottom = 20px, right, left = 35px */
 margin: 20px 10px 35px; /* top = 20px, left, right = 10px, bottom = 35px */
@@ -43,6 +49,8 @@ margin-top: 10px;
 margin-right: 2em;
 margin-bottom: 0;
 margin-left: 1rem;
+margin-block: 1rem; /* marge vertical (top + bottom) */
+margin-inline: 1rem; /* marge horitzontal (left + right) */
 
 border: 1px solid blue;
 border-width: 1px;
