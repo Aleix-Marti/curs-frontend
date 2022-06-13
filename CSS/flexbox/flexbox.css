@@ -1,0 +1,31 @@
+.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  /* width: 400px; */
+  height: 400px;
+  padding: 2rem 0;
+  background-color: aquamarine;
+}
+
+.topbar > a {
+  outline: 1px solid;
+}
+
+.bottom {
+  align-self: flex-end;
+}
+
+/* .topbar > a:first-child {
+  margin-right: auto;
+} */
+
+/* .mlauto {
+  margin-left: auto;
+} */
+
+/* .h40 {
+  height: 40px;
+} */
