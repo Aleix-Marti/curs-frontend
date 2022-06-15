@@ -1,0 +1,105 @@
+:root {
+  --main-color: #0044ff;
+  --alt-color: #007711;
+  --title: aquamarine;
+}
+
+
+body {
+  margin: 0;
+}
+
+section {
+  margin-bottom: 20vh;
+}
+
+.color {
+  background-color: blue;
+}
+
+.tobpar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #222;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+}
+
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+/* a {
+  color: var(--alt-color);
+} */
+
+/* .apartat-a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.hero {
+  display: grid;
+  place-content: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  height: 20rem;
+  background-image: url('assets/hero.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.title {
+  color: var(--title);
+  text-shadow: 0 0 5px green;
+}
+
+h2 {
+  text-align: center;
+}
+
+.apartat-a_contingut {
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  /* flex-direction: row; */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  border: 1px solid #222;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 15px 15px #666;
+}
+
+.card > p {
+  padding: 1rem;
+}
+
+.card > button {
+  margin: 1rem;
+  padding: .5rem 1rem; 
+}
