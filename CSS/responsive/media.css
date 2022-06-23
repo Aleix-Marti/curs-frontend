@@ -1,0 +1,56 @@
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+  margin: 10rem auto;
+  width: 80vw;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 15rem;
+  border: 1px solid #222;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 15px 15px #666;
+}
+
+.card > p {
+  padding: 1rem;
+}
+
+.card > button {
+  margin: 1rem;
+  padding: .5rem 1rem; 
+}
+
+
+
+
+
+/* 
+s'aplicarà per pantalles de COM A MÀXIM 600px, o el que és el mateix, pantalles MÉS PETITES de 600px
+*/
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: aquamarine;
+  }
+}
+
+
+/*
+Amb mides d'entre 600px i 900px no s'aplicarà cap estil en especial, que que no hi ha un color de background definit 
+*/
+
+
+
+/* 
+s'aplicarà per pantalles de COM A MÍNIM 900px, o el que és el mateix, pantalles MÉS GRANS de 900px
+*/
+@media only screen and (min-width: 900px) {
+  body {
+    background-color: lime;
+  }
+}
