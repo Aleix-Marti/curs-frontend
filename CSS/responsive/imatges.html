@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="imatges.css">
+</head>
+<body>
+
+  <section class="bg-img">
+    <p>Imatge de background</p>
+  </section>
+
+  <section class="bg-img-media">
+    <p>Imatge de background</p>
+  </section>
+
+  <section class="tag-img">
+    <p>Imatge de background</p>
+    <img src="assets/full.png" alt="Imatge d'un pare amb un fill en braços passejant per una platja">
+  </section>
+  
+  <section class="tag-img-srcset">
+    <p>Imatge de background</p>
+    <img src="assets/small.png" srcset="assets/medium.png 600w, assets/full.png 1200w" alt="Imatge d'un pare amb un fill en braços passejant per una platja">
+  </section>
+
+  <section class="tag-img-srcset">
+    <p>Imatge de background</p>
+    <picture>
+      <source srcset="assets/full.png" media="(min-width: 1200px)" />
+      <source srcset="assets/medium.png" media="(min-width: 600px)" />
+      <img src="assets/small.png" />
+    </picture>
+  </section>
+
+
+</body>
+</html>
