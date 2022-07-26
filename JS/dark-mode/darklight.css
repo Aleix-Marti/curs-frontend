@@ -1,0 +1,45 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #222;
+}
+
+body.light {
+  --bg-color: #fff;
+  --text-color: #222;
+}
+
+body.dark {
+  --bg-color: #222;
+  --text-color: #eee;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body.dark,
+  body.system {
+    --bg-color: #222;
+    --text-color: #eee;
+  }
+  body.light {
+    --bg-color: #fff;
+    --text-color: #222;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body.light,
+  body.system {
+    --bg-color: #fff;
+    --text-color: #222;
+  }
+  body.dark {
+    --bg-color: #222;
+    --text-color: #eee;
+  }
+}
+
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
