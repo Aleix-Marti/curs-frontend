@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Params</title>
+  <style>
+    .links {
+      display: inline-flex;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello URL Params</h1>
+  Contenidor on es mostrarà el contingut segons
+  <p id="content">No hi ha cap paràmetre a la URL</p>
+
+  <div class="links">
+    <a class="link" href="?lletra=A" target="_self">obrir A</a>
+    <a class="link" href="?lletra=B" target="_self">obrir B</a>
+    <a class="link" href="?lletra=C" target="_self">obrir C</a>
+    <!-- Enllaç per tornar enrera, similar al del propi navegador -->
+    <a id="back" href="javascript:history.back()">Tornar</a>
+  </div>
+
+
+
+
+
+  <script>
+  /* https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams */
+
+  const cont = document.querySelector('#content');
+  const back = document.querySelector('#back');
+  const links = document.querySelectorAll('.link');
+
+  // ocultar l'enllaç per tornar enrera quan estem a la pàgina o ruta inicial (sense paràmetres a la url)
+  back.style.display = "none";
+
+  // consultar si hi ha algun paràmetre a la URL
+  let params = new URLSearchParams(document.location.search);
+  let lletra = params.get("lletra");
+  if (lletra) {
+    // modificar el text del missatge
+    cont.innerHTML = `El paràmetre de la url és <strong>${lletra}</strong>`;
+    // mostrar l'enllaç per tornar enrera
+    back.style.display = "block";
+    // mostrar els links només quan estem a la pàgina o ruta inicial (sense paràmetres a la url)
+    links.forEach( link => link.style.display = "none" );
+  } else {
+    // modificar el text del missatge
+    cont.innerHTML = `No hi ha cap paràmetre a la URL`;
+    // ocultar l'enllaç per tornar enrera
+    back.style.display = "none";
+    // mostrar els links només quan estem a la pàgina o ruta inicial (sense paràmetres a la url)
+    links.forEach( link => link.style.display = "block" );
+  }
+  </script>
+
+</body>
+</html>
