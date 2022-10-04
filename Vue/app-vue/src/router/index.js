@@ -21,6 +21,32 @@ const router = createRouter({
       path: '/new',
       name: 'new',
       component: () => import('../views/NewView.vue')
+    },
+    {
+      path: '/for',
+      name: 'for',
+      component: () => import('../views/ForView.vue')
+    },
+    {
+      path: '/component',
+      name: 'component',
+      component: () => import('../views/ComponentView.vue')
+    },
+    {
+      path: '/composition',
+      name: 'composition',
+      component: () => import('../views/DemoComposition.vue')
+    },
+    {
+      path: '/options',
+      name: 'options',
+      component: () => import('../views/DemoOptions.vue')
+    },
+    {
+      path: '/single/:turtleId',
+      name: 'single',
+      props: true,
+      component: () => import('../views/SingleView.vue')
     }
   ]
 })
