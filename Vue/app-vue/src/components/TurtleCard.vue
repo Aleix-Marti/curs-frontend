@@ -40,6 +40,8 @@ const increment = () => {
   box-shadow: 0 0 5px 5px #eee;
   width: fit-content;
   min-width: 200px;
+  background-color: var(--bg-card);
+  color: var(--text-card);
 }
 .card button {
   margin-top: auto;
