@@ -1,0 +1,18 @@
+{
+  "nom": "Son Goku",
+  "origen": "Saiyajin",
+  "atacs": [
+    {
+      "KameHame": {
+        "dany": 100,
+        "energia": 50
+      }
+    },
+    {
+      "Bola Genki": {
+        "dany": 500,
+        "energia": 1000
+      }
+    }
+  ]
+}

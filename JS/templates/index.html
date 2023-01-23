@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    max-width: 200px;
+    height: auto;
+    box-sizing: border-box;
+    background-color:#BADA55;
+    border: 4px solid;
+    border-radius: 6px;
+    box-shadow: 0 0 15px 5px #666;
+  }
+  .card .like {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+  }
+  .card .like * {
+    cursor: pointer;
+  }
+  .card img {
+    max-width: 100%;
+  }
+  .info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .info button {
+    cursor: pointer;
+  }
+</style>
+<body>
+
+  <section class="info">
+    <button onclick="getFact()">New fact</button>
+    <button onclick="getFactAlt()">New fact Alt</button>
+    <div><span id="likes">0</span> Likes</div>
+  </section>
+
+  <section id="cards" class="cards"></section>
+  
+  <template id="template">
+    <article id="" class="card">
+      <img src="https://api.chucknorris.io/img/chucknorris_logo_coloured_small@2x.png" alt="Chuk Norris">
+      <!-- <img src="" alt="Chuk Norris"> -->
+      <p class="fact"></p>
+      <div class="like">
+        <label for="">Like</label>
+        <input type="checkbox" id="" onchange="count(this)">
+      </div>
+    </article>
+  </template>
+
+
+  <script>
+
+    function getFact() {
+
+      fetch('https://api.chucknorris.io/jokes/random')
+      .then( x => x.json() )
+      .then( fact => {
+        // console.dir(fact);
+
+        const out = document.querySelector('#cards'); // seleccionar el body y guardar-lo en una variable
+        const temp = document.getElementById('template'); // seleccionar el template i guardar-lo en una variable
+        const clonedTemplate = temp.content.cloneNode(true); // clonar el template
+
+        let card = clonedTemplate.querySelector('.card');
+        let randomFact = clonedTemplate.querySelector('.fact'); // seleccionar el p i guardar-lo en una variable
+        // let img = clonedTemplate.querySelector('img'); // seleccionar la img i guardar-la en una variable
+        let label = clonedTemplate.querySelector('label'); // seleccionar la label i guardar-la una variable
+        let check = clonedTemplate.querySelector('input'); // seleccionar el checkbox i guardar-lo en una variable
+
+        card.setAttribute('id', fact.id); // assigna l'id rebut de la API
+        randomFact.textContent = fact.value; // assigna el text rebut de la API
+        // img.setAttribute('src', fact.icon_url);
+        label.setAttribute('for', `check-${fact.id}`); // assigna a l'atribut for l'id rebut de la API amb el prefix "check-", per enllaçar-lo al checkbox
+        check.setAttribute('id', `check-${fact.id}`); // assigna l'id rebut de la API amb el prefix "check-", per evitar duplicat amb l'id de l'article
+        
+        out.appendChild(clonedTemplate); // afegeix el clon amb tota la informació al section id="cards"
+        
+      });
+  }
+
+  let counter = 0;
+
+  function count(me){
+    // console.log(me);
+    // console.dir(me);
+    // console.log(me.checked);
+
+    // if( me.checked == true ) {
+    //   counter++
+    // } else {
+    //   counter--
+    // }
+
+    ( me.checked ) ? counter++ : counter-- ; // operació ternaria equivalent al if/else comentat
+
+    document.getElementById('likes').innerText = counter;
+  }
+
+
+
+
+function getFactAlt() {
+
+  fetch('https://api.chucknorris.io/jokes/random')
+  .then( x => x.json() )
+  .then( fact => {
+    // console.dir(fact);
+
+    let card = `<article id="${fact.id}" class="card">
+                  <img src="https://api.chucknorris.io/img/chucknorris_logo_coloured_small@2x.png" alt="Chuk Norris">
+                  <p class="fact">${fact.value}</p>
+                  <div class="like">
+                    <label for="check-${fact.id}">Like</label>
+                    <input type="checkbox" id="check-${fact.id}" onchange="count(this)">
+                  </div>
+                </article>`;
+
+    const out = document.querySelector('#cards');
+    // out.innerHTML = out.innerHTML + card;
+    out.innerHTML += card;
+
+    
+    
+  });
+}
+
+
+    
+    
+
+  </script>
+</body>
+</html>

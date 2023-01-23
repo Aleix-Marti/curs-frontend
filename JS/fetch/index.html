@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch</title>
+</head>
+<body>
+  
+  <p id="demo">Fetch a file to change this text.</p>
+  <img src="" alt="" id="pokeimg">
+
+  <button onclick="getText()">Click to fetch Text</button>
+  <button onclick="getTextAsync()">Click to fetch async</button>
+  <button onclick="getJson()">Click to fetch JSON</button>
+  <button onclick="fetchAPI()">Click to fetch API</button>
+
+<script>
+
+let file = "fetch_info.txt";
+let json  = "dbz.json";
+let url = "https://pokeapi.co/api/v2/pokemon/ditto";
+
+// funció que llegeix un text, processa el text i l'escriu sobre el <p> amb ID="demo"
+function getText() {
+  fetch (file)
+    .then(x => x.text() )
+    .then(y => document.getElementById("demo").innerHTML = y );
+  }
+
+// funció asíncrona que llegeix un text, processa el text i l'escriu sobre el <p> amb ID="demo"
+async function getTextAsync() {
+  let myObject = await fetch(file);
+  let myText = await myObject.text();
+  document.getElementById("demo").innerHTML = myText;
+}
+
+// funció que llegeix un fitxer JSON, processa la resposta com a JSON i escriu el valor de la clau "nom" sobre el <p> amb ID="demo"
+function getJson() {
+  fetch (json)
+  .then(x => {
+    console.dir(x);
+    return x.json();
+  })
+  .then(y => {
+    console.dir(y);
+    document.getElementById("demo").innerHTML = y.nom}
+    )
+  }
+
+// funció que una API, processa la resposta com a JSON i escriu el valor de la clau "name" sobre el <p> amb ID="demo"
+function fetchAPI() {
+  fetch (url)
+  .then(x => {
+    // console.dir(x);
+    return x.json();
+  })
+  .then(y => {
+    console.dir(y);
+    let abs = y.abilities;
+    let abilities = '';
+    abs.forEach(el => {
+      console.dir(el.ability.name);
+      abilities += ' ' + el.ability.name;
+    });
+
+    document.getElementById("demo").innerHTML = y.name + ', ' + abilities;
+    document.getElementById('pokeimg').setAttribute('src', y.sprites.back_default );
+  })
+}
+
+</script>
+
+
+</body>
+</html>
