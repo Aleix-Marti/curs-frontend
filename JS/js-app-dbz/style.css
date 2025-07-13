@@ -1,0 +1,44 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow: hidden;
+  &.selected {
+    background-color: aquamarine;
+  }
+
+  & .card__image {
+    max-height: 200px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  & .buttons {
+    display: flex;
+  }
+
+  & .card__info {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: all .3s;
+
+    & .card__info__text {
+      overflow: hidden;
+    }
+  }
+
+  &.show {
+    & .card__info {
+      grid-template-rows: 1fr;
+    }
+  }
+
+
+}
