@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="exemple.js"></script>
+</head>
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+  }
+
+  .card.selected {
+    background-color: aquamarine;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+</style>
+<body>
+  
+  <input type="number" name="" id="numpokes">
+  <!-- <button id="getpokes" onclick="btnClick()">Get Pokemons</button> -->
+  <button id="getpokes">Get Pokemons</button>
+
+  <div id="pokecards" class="cards"></div>
+
+  <button id="getJSON" onclick="getJSON(5)">get JSON</button>
+
+
+  <template id="poketemplate">
+    <article class="card" onclick="paint(this)">
+      <h2></h2>
+      <img src="" alt="">
+      <div>A: <span class="attack"></span></div>
+      <div>D: <span class="defense"></span></div>
+    </aricle>
+  </template>
+
+</body>
+</html>

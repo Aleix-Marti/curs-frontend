@@ -1,0 +1,93 @@
+[
+    {
+        "id": 0,
+        "name": "Goku",
+        "race": "Saiyan",
+        "attack": 9500,
+        "defense": 8500,
+        "characteristic_attack": "Kamehameha",
+        "image": "https://dragonball-api.com/characters/goku_normal.webp"
+    },
+    {
+        "id": 1,
+        "name": "Vegeta",
+        "race": "Saiyan",
+        "attack": 9000,
+        "defense": 8800,
+        "characteristic_attack": "Final Flash",
+        "image": "Vegeta.webp"
+    },
+    {
+        "id": 2,
+        "name": "Piccolo",
+        "race": "Namekiano",
+        "attack": 8000,
+        "defense": 8300,
+        "characteristic_attack": "Special Beam Cannon",
+        "image": "Piccolo.webp"
+    },
+    {
+      "id": 3,
+        "name": "Android 18",
+      "race": "Android",
+      "attack": 7800,
+      "defense": 7600,
+      "characteristic_attack": "Energy Wave",
+      "image": "https://dragonball-api.com/characters/Androide_18_Artwork.webp"
+  },
+    {
+        "id": 4,
+        "name": "Gohan",
+        "race": "Saiyan/Humano",
+        "attack": 8500,
+        "defense": 8000,
+        "characteristic_attack": "Masenko",
+        "image": "Gohan.webp"
+    },
+    {
+        "id": 5,
+        "name": "Trunks",
+        "race": "Saiyan/Humano",
+        "attack": 8700,
+        "defense": 8500,
+        "characteristic_attack": "Burning Attack",
+        "image": "Trunks.webp"
+    },
+    {
+        "id": 6,
+        "name": "Bulma",
+        "race": "Humano",
+        "attack": 200,
+        "defense": 250,
+        "characteristic_attack": "Ninguno",
+        "image": "Bulma.webp"
+    },
+    {
+        "id": 7,
+        "name": "Freezer",
+        "race": "Desconocida",
+        "attack": 9400,
+        "defense": 9100,
+        "characteristic_attack": "Death Beam",
+        "image": "Frieza.webp"
+    },
+    {
+        "id": 8,
+        "name": "Cell",
+        "race": "Bio-Androide",
+        "attack": 9300,
+        "defense": 9200,
+        "characteristic_attack": "Kamehameha",
+        "image": "Cell.webp"
+    },
+    {
+        "id": 9,
+        "name": "Majin Buu",
+        "race": "Majin",
+        "attack": 9600,
+        "defense": 9500,
+        "characteristic_attack": "Chocolate Beam",
+        "image": "MajinBoo.webp"
+    }
+  ]
+  
