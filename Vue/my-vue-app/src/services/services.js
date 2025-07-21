@@ -1,3 +1,6 @@
+const FIGHTERS_URL = 'https://retoolapi.dev/nJCkCJ/data'
+
+
 export const getCharacters = async () => {
   const response = await fetch('https://dragonball-api.com/api/characters')
   const data = await response.json()
@@ -31,4 +34,35 @@ const getPokeByName = async ( name ) => {
     image: data.sprites.front_default 
   }
   return pokeInfo
+}
+
+
+export const getFighters = async () => {
+  const response = await fetch(FIGHTERS_URL)
+  console.log(response)
+  const data = await response.json()
+  console.log(data)
+  return data
+}
+
+
+export const getSingleFighter = async ( id ) => {
+  const response = await fetch(`${FIGHTERS_URL}/${id}`)
+  const data = await response.json()
+  console.log(data)
+  return data
+}
+
+export const addFighter = async ( dataToSend ) => {
+  const response = await fetch(FIGHTERS_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend)
+      });
+
+      console.log(response)
+  
+  return response
 }

@@ -1,15 +1,18 @@
 <script setup>
-import Card from '../components/Card.vue'
+// import Card from '../components/Card.vue'
+import Fighter from '../components/Fighter.vue'
 import { onMounted, ref } from 'vue'
-import { getCharacters, getPokes } from '../services/services'
+import { getCharacters, getPokes, getFighters } from '../services/services'
 
 const chars = ref([])
 const pokes = ref([])
+const fighters = ref([])
 
 onMounted ( async () => {
 
-  chars.value = await getCharacters()
-  pokes.value = await getPokes()
+  // chars.value = await getCharacters()
+  // pokes.value = await getPokes()
+  fighters.value = await getFighters()
 
 })
 
@@ -29,7 +32,17 @@ onMounted ( async () => {
       
     </ul> -->
 
-      <div class="character" v-for="poke in pokes" :key="poke.id">
+    <section class="characters">
+      <!-- <div class="character" v-for="f in fighters" :key="f.id">
+        <h2>{{ f.name }}</h2>
+        <img :src="f.img" />
+        <div>{{ f.attack }} | {{ f.deffense }}</div>
+      </div> -->
+      <Fighter v-for="f in fighters" :key="f.id" :info="f" />
+      
+    </section>
+
+      <!-- <div class="character" v-for="poke in pokes" :key="poke.id">
         <h2>{{ poke.name }}</h2>
         <img :src="poke.image" />
         <span v-for="type in poke.types" :key="type">{{ type }}</span>
@@ -37,7 +50,7 @@ onMounted ( async () => {
 
     <section class="characters">
       <Card v-for="char in chars" :key="char.id" :info="char" />
-    </section>
+    </section> -->
 
   </main>
 
