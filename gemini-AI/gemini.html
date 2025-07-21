@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomanador de Viatges</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>
+        <svg class="lucide-icon large-icon" style="color: #2563eb;" viewBox="0 0 24 24">
+          <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+          <path d="M20 3v4"/>
+          <path d="M22 5h-4"/>
+          <path d="M4 17v2"/>
+          <path d="M5 18H3"/>
+        </svg>
+        Recomanador de Viatges
+      </h1>
+      <p>Descobreix el teu proper destí amb l'ajuda d'Intel·ligència Artificial</p>
+    </div>
+    
+    <div class="main-grid">
+      <!-- Formulari -->
+      <div class="card">
+        <h2>Dades del viatge</h2>
+        
+        <form id="travel-form">
+          <div class="form-group">
+            <label class="form-label">
+              <svg class="lucide-icon" viewBox="0 0 24 24">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Destinació
+            </label>
+            <input
+            type="text"
+            id="destination"
+            name="destination"
+            placeholder="Ex: Barcelona, París, Tokyo..."
+            class="form-control"
+            required
+            />
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">
+              <svg class="lucide-icon" viewBox="0 0 24 24">
+                <path d="M8 2v4"/>
+                <path d="M16 2v4"/>
+                <rect width="18" height="18" x="3" y="4" rx="2"/>
+                <path d="M3 10h18"/>
+              </svg>
+              Durada del viatge
+            </label>
+            <select id="duration" name="duration" class="form-control" required>
+              <option value="">Selecciona durada</option>
+              <option value="1-2 dies">1-2 dies</option>
+              <option value="3-5 dies">3-5 dies</option>
+              <option value="1 setmana">1 setmana</option>
+              <option value="2 setmanes">2 setmanes</option>
+              <option value="1 mes o més">1 mes o més</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">
+              <svg class="lucide-icon" viewBox="0 0 24 24">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              Nombre de viatgers
+            </label>
+            <select id="travelers" name="travelers" class="form-control" required>
+              <option value="">Selecciona nombre</option>
+              <option value="1">1 persona</option>
+              <option value="2">2 persones</option>
+              <option value="3-4">3-4 persones</option>
+              <option value="5+">5 o més</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">
+              <svg class="lucide-icon" viewBox="0 0 24 24">
+                <line x1="12" y1="2" x2="12" y2="22"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+              Pressupost aproximat
+            </label>
+            <select id="budget" name="budget" class="form-control" required>
+              <option value="">Selecciona pressupost</option>
+              <option value="Econòmic (menys de 500€)">Econòmic (menys de 500€)</option>
+              <option value="Mitjà (500-1500€)">Mitjà (500-1500€)</option>
+              <option value="Alt (1500-3000€)">Alt (1500-3000€)</option>
+              <option value="Luxe (més de 3000€)">Luxe (més de 3000€)</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">
+              Interessos principals
+            </label>
+            <input
+            type="text"
+            id="interests"
+            name="interests"
+            placeholder="Ex: història, gastronomia, natura, art..."
+            class="form-control"
+            required
+            />
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">
+              Època de l'any
+            </label>
+            <select id="season" name="season" class="form-control" required>
+              <option value="">Selecciona època</option>
+              <option value="Primavera">Primavera</option>
+              <option value="Estiu">Estiu</option>
+              <option value="Tardor">Tardor</option>
+              <option value="Hivern">Hivern</option>
+              <option value="Flexible">Flexible</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">
+              Tipus d'allotjament preferit
+            </label>
+            <select id="accommodation" name="accommodation" class="form-control" required>
+              <option value="">Selecciona allotjament</option>
+              <option value="Hotel">Hotel</option>
+              <option value="Apartament">Apartament</option>
+              <option value="Hostal">Hostal</option>
+              <option value="Casa rural">Casa rural</option>
+              <option value="Camping">Camping</option>
+            </select>
+          </div>
+          
+          <button type="submit" id="submit-btn" class="btn">
+            <svg class="lucide-icon" viewBox="0 0 24 24">
+              <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/>
+              <path d="M21.854 2.147 10.94 13.06"/>
+            </svg>
+            Generar recomanació
+          </button>
+        </form>
+      </div>
+      
+      <!-- Resultats -->
+      <div class="card">
+        <h2>La teva recomanació</h2>
+        
+        <div id="error-message" class="alert alert-error hidden">
+          <p id="error-text"></p>
+        </div>
+        
+        <div id="loading" class="loading hidden">
+          <div class="spinner"></div>
+          <span style="margin-left: 0.75rem;">Generant la teva recomanació personalitzada...</span>
+        </div>
+        
+        <div id="recommendation" class="recommendation hidden">
+          <pre id="recommendation-text"></pre>
+        </div>
+        
+        <div id="empty-state" class="empty-state">
+          <svg class="lucide-icon" viewBox="0 0 24 24">
+            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .963L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+            <path d="M20 3v4"/>
+            <path d="M22 5h-4"/>
+            <path d="M4 17v2"/>
+            <path d="M5 18H3"/>
+          </svg>
+          <p>Omple el formulari i genera la teva recomanació personalitzada!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</body>
+</html>
